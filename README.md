@@ -47,8 +47,9 @@
 <h3>Big O of Objects</h3>
     <ul>
         <li>Access - O(1)</li>
-        <li>search - O(n)</li>
-        <li>push/pop - O(1)</li>
-        <li>shift/unshift/splice - O(n)</li>
-        <li>map/filter/reduce/forEach - O(n)</li>
+        <li>Search - O(n)</li>
+        <li>Remove - O(1)</li>
+        <li>Object.keys() - O(n)</li>
+        <li>Object.values() - O(n)</li>
+        <li>Object.entries() - O(n)</li>
     </ul>
