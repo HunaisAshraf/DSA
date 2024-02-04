@@ -36,12 +36,14 @@
         <li>Theta notation - Average case scenario</li>
     </ol>
 
-<h3>Big O of Array</h3>
+<h3>Big O</h3>
     <ul>
-        <li>Access - O(1)</li>
-        <li>search - O(n)</li>
-        <li>push/pop - O(1)</li>
-        <li>shift/unshift/splice - O(n)</li>
+        <li>O(1) - Constant</li>
+        <li>O(n log n) - Lograthimic (for sorted array - Binary Search)</li>
+        <li>O(n) - Linear</li>
+        <li>O(n^2) - quadratic</li>
+        <li>O(2^n) - Exponential</li>
+        <li>O(n!) - Factorial</li>
     </ul>
 
 <h3>Big O of Objects</h3>
