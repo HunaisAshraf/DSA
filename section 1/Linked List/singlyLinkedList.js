@@ -141,12 +141,57 @@ class LinkedList {
     this.size--;
     return removed;
   }
+
+  //remove by value
+  removeValue(val) {
+    if (this.size === 0) return null;
+    if (this.head.val === val) {
+      this.head = this.head.next;
+      this.size--;
+      return val;
+    } else {
+      let curr = this.head;
+      let prev = curr;
+
+      while (curr.val !== val) {
+        prev = curr;
+        curr = curr.next;
+      }
+
+      prev.next = curr.next;
+      curr = null;
+      this.size--;
+      return curr;
+    }
+    return null;
+  }
+
+  //reverse the list
+  reverse() {
+    let node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+
+    let next;
+    let prev = null;
+
+    for (let i = 0; i < this.size; i++) {
+      next = node.next;
+      node.next = prev;
+      prev = node;
+      node = next;
+    }
+    return this;
+  }
 }
 
 const list = new LinkedList();
-list.push("hello");
-list.push("hi");
-list.push("how");
+list.push(1);
+list.push(2);
+list.push(3);
+list.push(4);
+list.push(5);
+list.push(6);
 // console.log(list.get(0));
 // console.log(list.pop());
 // list.shift();
@@ -154,11 +199,14 @@ list.push("how");
 // list.unshift("laksjdfl");
 // console.log(list.set(1, "heee"));
 // list.insert(0, "sadf");
-list.insert(0, "aa");
-list.insert(2, "waa");
-list.insert(5, "wssaa");
-console.log(list.size);
+// list.insert(0, "aa");
+// list.insert(2, "waa");
+// list.insert(5, "wssaa");
+// console.log(list.size);
+// list.print();
+// console.log(list.remove(2));
+// list.print();
+list.reverse();
+list.removeValue(3);
 list.print();
-console.log(list.remove(2));
-list.print();
-console.log(list.size);
+// console.log(list.size);
