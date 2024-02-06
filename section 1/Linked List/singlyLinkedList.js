@@ -168,20 +168,31 @@ class LinkedList {
 
   //reverse the list
   reverse() {
-    let node = this.head;
-    this.head = this.tail;
-    this.tail = node;
+    // let node = this.head;
+    // this.head = this.tail;
+    // this.tail = node;
 
-    let next;
+    // let next;
+    // let prev = null;
+
+    // for (let i = 0; i < this.size; i++) {
+    //   next = node.next;
+    //   node.next = prev;
+    //   prev = node;
+    //   node = next;
+    // }
+    // return this;
+
     let prev = null;
+    let curr = this.head;
 
-    for (let i = 0; i < this.size; i++) {
-      next = node.next;
-      node.next = prev;
-      prev = node;
-      node = next;
+    while (curr) {
+      let next = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = next
     }
-    return this;
+    this.head = prev;
   }
 }
 
