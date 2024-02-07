@@ -38,4 +38,15 @@ function countVowelsAndConsonants(str) {
 
 // console.log(countVowelsAndConsonants("education"));
 
+function searchInString(str, search) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    for (let j = 0; j < search.length; j++) {
+      if (search[j] !== str[i + j]) break;
+      if (j === search.length - 1) count++;
+    }
+  }
+  return count;
+}
 
+console.log(searchInString("hi hellohi hi","hi"));
