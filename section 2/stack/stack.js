@@ -23,7 +23,7 @@ class Stack {
       this.head = node;
     }
     this.size++;
-    return this.size;
+    return node;
   }
 
   pop() {
@@ -34,16 +34,19 @@ class Stack {
     }
     this.head = this.head.next;
     this.size--;
-    return temp;
+    return temp.val;
   }
 }
 
 const stack = new Stack();
 
-console.log(stack.push(3));
-console.log(stack.push(7));
-console.log(stack.push(5));
+// console.log(stack.push(3));
+// console.log(stack.push(2));
+// console.log(stack.push(7));
+// console.log(stack.push(5));
+stack.push("first")
+stack.push("second")
 console.log(stack.pop());
-console.log(stack.pop());
-console.log(stack.pop());
-console.log(stack.pop());
+// console.log(stack.pop());
+// console.log(stack.pop());
+// console.log(stack.pop());
