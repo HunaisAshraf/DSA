@@ -12,3 +12,19 @@
         <li>Printers</li>
         <li>Callback queue in javascript runtime</li>
     </ul>
+
+<h1>Circular Queue</h1>
+    The size of the queue is fixed and a single block of memory is used as if the first element is connected to the last element.
+    Also referred to as circular buffer or ring buffer and follows the FIFO priciple.
+    A circular queue will reuse the empty block created during deque operation.
+    The circular queue supports two main operations.
+    <ul>
+        <li>Enqueue - add elements to the end</li>
+        <li>Dequeue - remove elements from the start</li>
+    </ul>
+    <h3>Application of circular queue</h3>
+    <ul>
+        <li>clock</li>
+        <li>Streaming data</li>
+        <li>Traffic lights</li>
+    </ul>
