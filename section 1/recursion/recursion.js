@@ -32,9 +32,9 @@ function recursiveBinarySearch(arr, val, left, right) {
     if (arr[mid] === val) {
       return mid;
     } else if (arr[mid] < val) {
-      return recursiveBinarySearch(arr, val, left + 1, right);
+      return recursiveBinarySearch(arr, val, mid + 1, right);
     } else {
-      return recursiveBinarySearch(arr, val, left, right - 1);
+      return recursiveBinarySearch(arr, val, left, mid - 1);
     }
   }
   return -1;
@@ -42,4 +42,4 @@ function recursiveBinarySearch(arr, val, left, right) {
 
 let arr = [1, 2, 3, 4, 5, 6, 7, 8];
 
-console.log(recursiveBinarySearch(arr, 7, 0, arr.length - 1));
+console.log(recursiveBinarySearch(arr, 5, 0, arr.length - 1));
