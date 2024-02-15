@@ -14,7 +14,11 @@ class HashTable {
 
   set(key, value) {
     let index = this.hash(key);
-    this.table[index] = value;
+    // this.table[index] = value;
+    if (!this.table[index]) {
+      this.table[index] = [];
+    }
+    this.table[index].push([key, value]);
   }
 
   get(key) {
@@ -25,7 +29,7 @@ class HashTable {
   print() {
     for (let i = 0; i < this.table.length; i++) {
       if (this.table[i]) {
-        console.log(i,this.table[i]);
+        console.log(i, this.table[i]);
       }
     }
   }
@@ -33,9 +37,10 @@ class HashTable {
 
 const table = new HashTable(50);
 
-table.set("name","hunais")
-table.set("age",23)
+table.set("name", "hunais");
+table.set("name", "alkfj");
+table.set("age", 23);
 
-console.log(table.get("mane"));
+console.log(table.get("nahhme"));
 
-table.print()
+// table.print();
