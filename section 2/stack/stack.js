@@ -40,13 +40,32 @@ class Stack {
 
 const stack = new Stack();
 
-// console.log(stack.push(3));
-// console.log(stack.push(2));
-// console.log(stack.push(7));
-// console.log(stack.push(5));
+console.log(stack.push(3));
+console.log(stack.push(2));
+console.log(stack.push(7));
+console.log(stack.push(5));
 stack.push("first")
 stack.push("second")
 console.log(stack.pop());
-// console.log(stack.pop());
-// console.log(stack.pop());
-// console.log(stack.pop());
+console.log(stack.pop());
+console.log(stack.pop());
+console.log(stack.pop());
+
+
+
+// reverse string using stack
+function reverse(str) {
+  let stack = [];
+
+  for (let i of str) {
+    stack.push(i);
+  }
+
+  let revStr = "";
+  while (stack.length > 0) {
+    revStr += stack.pop();
+  }
+  return revStr;
+}
+
+console.log(reverse("hello"))
