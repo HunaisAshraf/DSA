@@ -30,5 +30,25 @@ function quickSort(arr, left = 0, right = arr.length - 1) {
   return arr;
 }
 
-console.log(quickSort([4, 2, 6, 1, 3, 7]));
-// console.log(pivot([4, 2, 6, 1, 3, 7]));
+// console.log(quickSort([1, 2, 6, 4, 3, 7]));
+// console.log(pivot([1, 2, 6, 4, 3, 7]));
+
+//with extra space
+function sort(arr) {
+  if (arr.length <= 1) return arr;
+  let left = [];
+  let right = [];
+  let pivot = arr[arr.length - 1];
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] < pivot) {
+      left.push(arr[i]);
+    } else {
+      right.push(arr[i]);
+    }
+  }
+
+  return [...sort(left), pivot, ...sort(right)];
+}
+
+console.log(sort([1, -6, 2, 4, -3, 7]));
