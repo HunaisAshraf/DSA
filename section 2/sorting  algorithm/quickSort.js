@@ -8,7 +8,7 @@ function pivot(arr, start = 0, end = arr.length - 1) {
     arr[j] = temp;
   }
 
-  for (let i = start + 1; i < arr.length; i++) {
+  for (let i = start + 1; i < end; i++) {
     if (arr[i] < pivot) {
       swapIdx++;
       swap(arr, i, swapIdx);
@@ -30,7 +30,7 @@ function quickSort(arr, left = 0, right = arr.length - 1) {
   return arr;
 }
 
-// console.log(quickSort([1, 2, 6, 4, 3, 7]));
+console.log(quickSort([-1,1, 2, 6, 4, 3, 7]));
 // console.log(pivot([1, 2, 6, 4, 3, 7]));
 
 //with extra space
@@ -51,4 +51,4 @@ function sort(arr) {
   return [...sort(left), pivot, ...sort(right)];
 }
 
-console.log(sort([1, -6, 2, 4, -3, 7]));
+// console.log(sort([1, -6, 2, 4, -3, 7]));

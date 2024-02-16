@@ -30,7 +30,17 @@ class HashTable {
   get(key) {
     let index = this.hash(key);
     return this.table[index][0][1];
-    return this.table[index][0][1];
+  }
+
+  remove(key) {
+    const index = this.hash(key);
+    const bucket = this.table[index];
+    if (bucket) {
+      const item = bucket.find((item) => item[0] === key);
+      if (item) {
+        bucket.splice(bucket.indexOf(item), 1);
+      }
+    }
   }
 
   print() {
@@ -45,10 +55,45 @@ class HashTable {
 const table = new HashTable(50);
 
 table.set("name", "hunais");
-table.set("name", "alkfj");
-table.set("name", "aaaaa");
 table.set("age", 23);
-
 console.log(table.get("name"));
+console.log(table.get("age"));
 
-// table.print();
+table.remove("age")
+
+
+table.print();
+
+// class HashTable {
+//   constructor(size) {
+//     this.data = new Array(size);
+//   }
+
+//   hash(key) {
+//     let hash = 0;
+//     for (let i = 0; i < key.length; i++) {
+//       hash += key.charCodeAt(i);
+//     }
+//     return hash % this.data.length;
+//   }
+
+//   set(key, value) {
+//     let index = this.hash(key);
+//     this.data[index] = value;
+//   }
+
+
+//   get(key) {
+//     let index = this.hash(key);
+
+//     return this.data[index]
+//   }
+// }
+
+// const table = new HashTable(50);
+
+// table.set("aba", 22);
+// table.set("bbb", 22);
+// table.set("baa", 55);
+// console.log(table.get("aba"));
+// console.log(table.get("baa"));
