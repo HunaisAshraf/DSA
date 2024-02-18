@@ -28,3 +28,9 @@
         <li>Streaming data</li>
         <li>Traffic lights</li>
     </ul>
+
+<h1>Double-ended queue</h1>
+    In a double-ended queue the insertion and deletion operations, both can be performed from both ends. 
+
+<h1>Priority Queue</h1>
+    A priority queue is a special queue where the elements are accessed based on the priority assigned to them.
