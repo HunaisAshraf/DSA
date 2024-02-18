@@ -28,3 +28,10 @@
 
 <h3>Load Factor</h3>
     A hash table’s load factor is determined by how many elements are kept there in relation to how big the table is. The table may be cluttered and have longer search times and collisions if the load factor is high. An ideal load factor can be maintained with the use of a good hash function and proper table resizing.
+
+<h1>Big O of Hash Tables</h1>
+    <ul>
+        <li>Access - O(1)</li>
+        <li>Remove - O(1)</li>
+        <li>Search - O(n)</li>
+    </ul>
