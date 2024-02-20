@@ -4,3 +4,7 @@
 
 <h1>Binary Tree</h1>
     A binary Tree is defined as a Tree data structure with at most 2 children. Since each element in a binary tree can have only 2 children, we typically name them the left and right child.
+
+
+<h1>Breadth-First Search</h1>
+    Breadth-First Search (BFS) is a traversal or search algorithm that explores a tree or graph level by level. In the context of trees, BFS starts at the root and explores the neighbor nodes at the present depth before moving on to nodes at the next depth level. It visits all the nodes at the current depth level before moving on to nodes at the next level.
