@@ -6,6 +6,8 @@ class Node {
   }
 }
 
+//iterative method
+
 class BinarySearchTree {
   constructor() {
     this.root = null;
@@ -36,7 +38,7 @@ class BinarySearchTree {
     }
   }
 
-  find(val) {
+  search(val) {
     if (this.root === null) return false;
     let curr = this.root;
     while (true) {
@@ -49,13 +51,33 @@ class BinarySearchTree {
       }
     }
   }
+
+  bfs() {
+    if (!this.root) return null;
+
+    const queue = [];
+    const data = [];
+    let node = this.root;
+    queue.push(node);
+
+    while (queue.length) {
+      node = queue.shift();
+      data.push(node.val);
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
+    }
+    return data;
+  }
 }
 
 const bst = new BinarySearchTree();
-console.log(bst.insert(20));
-console.log(bst.insert(10));
-console.log(bst.insert(30));
-console.log(bst.insert(12));
-console.log(bst.insert(31));
+bst.insert(20);
+bst.insert(10);
+bst.insert(30);
+bst.insert(12);
+bst.insert(9);
+bst.insert(31);
+bst.insert(28);
 
-console.log(bst.find(31));
+// console.log(bst.search(30));
+console.log(bst.bfs())
