@@ -51,9 +51,9 @@ class BinarySearchTree {
       }
     }
   }
+
+
 }
-
-
 
 const bst = new BinarySearchTree();
 bst.insert(20);
