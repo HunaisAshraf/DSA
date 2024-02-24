@@ -70,6 +70,6 @@ g.addedges("sanooj", "akil");
 
 g.removeVertex("liston");
 
-// g.removeEdge("hii", "hello");
+g.removeEdge("sanooj", "akil");
 
 console.log(g.adjacencyList);
