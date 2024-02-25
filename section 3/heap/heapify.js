@@ -69,6 +69,8 @@ class Heap {
 
 const heap = new Heap();
 
-console.log("heap : ",heap.buildHeap([15, 5, 20, 1, 17, 10, 30]));
+// console.log("heap : ",heap.buildHeap([15, 5, 20, 1, 17, 10, 30]));
 
-console.log("sorted : ",heap.heapSort([15, 5, 20, 1, 17, 10, 30]));
+// console.log("sorted : ",heap.heapSort([15, 5, 20, 1, 17, 10, 30]));
+
+console.log(heap.heapSort([4,3,7,5,2,6,1]))

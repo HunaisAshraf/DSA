@@ -59,15 +59,18 @@ heap.heapifyUp(12)
 heap.heapifyUp(41)
 heap.heapifyUp(39)
 heap.heapifyUp(199)
-let data = [];
-data.push(heap.heapifyDown());
-data.push(heap.heapifyDown());
-data.push(heap.heapifyDown());
-// heap.heapifyDown();
-// heap.heapifyDown();
-
-console.log("heapdown " ,data)
-console.log(heap.heap);
+console.log(heap.heap)
 
 
-let stack = []
+// let data = [];
+// data.push(heap.heapifyDown());
+// data.push(heap.heapifyDown());
+// data.push(heap.heapifyDown());
+// // heap.heapifyDown();
+// // heap.heapifyDown();
+
+// console.log("heapdown " ,data)
+// console.log(heap.heap);
+
+
+// let stack = []

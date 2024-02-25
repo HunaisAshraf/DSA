@@ -66,19 +66,19 @@ console.log(heap.insert(-1));
 console.log(heap.insert(-33));
 console.log(heap.insert(1222));
 
-let data = [];
+// let data = [];
 
-data.push(heap.remove());
-data.push(heap.remove());
-data.push(heap.remove());
-data.push(heap.remove());
-data.push(heap.remove());
-data.push(heap.remove());
-data.push(heap.remove());
-data.push(heap.remove());
+// data.push(heap.remove());
+// data.push(heap.remove());
+// data.push(heap.remove());
+// data.push(heap.remove());
+// data.push(heap.remove());
+// data.push(heap.remove());
+// data.push(heap.remove());
+// data.push(heap.remove());
 
-console.log(data);
-console.log(heap.heap);
+// console.log(data);
+// console.log(heap.heap);
 
 // class MinHeap {
 //   constructor() {
