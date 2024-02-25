@@ -39,7 +39,7 @@ class Graph {
       }
     }
     return result;
-    
+
   }
 }
 
