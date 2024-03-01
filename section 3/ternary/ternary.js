@@ -43,14 +43,33 @@ class Ternary {
       parent.middle = node;
     }
   }
+
+  search(val) {
+    if (!this.root) return false;
+    let curr = this.root;
+    while (curr) {
+      if (curr.val === val) return true;
+
+      if (val < curr.val) {
+        curr = curr.left;
+      } else if (val > curr.val) {
+        curr = curr.right;
+      } else {
+        curr = curr.middle;
+      }
+    }
+    return false;
+  }
 }
 
 const tree = new Ternary();
 
 tree.insert(5);
-tree.insert(8)
-tree.insert(3)
-tree.insert(44)
-tree.insert(22)
+tree.insert(8);
+tree.insert(3);
+tree.insert(44);
+tree.insert(22);
+
+console.log(tree.search());
 
 console.log(tree.root);
