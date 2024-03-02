@@ -43,10 +43,39 @@ class Trie {
     }
     return true;
   }
+  printWords(node = this.root, word = "", result = []) {
+    if (node.endOfWord) {
+      result.push(word);
+    }
+    for (let c in node.children) {
+      this.printWords(node.children[c], word + c, result);
+    }
+    return result;
+  }
+
+  autoComplete(word) {
+    let node = this.root;
+    for (let c of word) {
+      if (!node.children[c]) {
+        return [];
+      }
+      node = node.children[c];
+    }
+    let list = [];
+    this.printWords(node, word, list);
+    return list;
+  }
+
+  
 }
 
 const trie = new Trie();
 trie.insert("hello");
-console.log(trie.search("hunai"));
-console.log(trie.startsWith("hunai"));
-console.log(trie.root.children);
+trie.insert("hi");
+trie.insert("hunais");
+trie.insert("mahin");
+console.log(trie.search("hunais"));
+console.log(trie.startsWith("huna"));
+// console.log(trie.root.children);
+console.log(trie.printWords());
+console.log(trie.autoComplete("he"));

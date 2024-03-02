@@ -112,7 +112,7 @@ class WeightedGraph {
       }
       previous[vertex] = null;
     }
-
+3
     // while (nodes.heap.length) {}
   }
 }
