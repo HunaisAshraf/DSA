@@ -28,10 +28,9 @@ function search(arr, t) {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === t) {
       return true;
-    } else {
-      return false;
-    }
+    } 
   }
+  return false;
 }
 
 // console.log(search(array, 3)); // O(n)
