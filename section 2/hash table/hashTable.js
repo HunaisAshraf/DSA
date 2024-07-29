@@ -29,7 +29,7 @@ class HashTable {
 
   get(key) {
     let index = this.hash(key);
-    return this.table[index][0][1];
+    return this.table[index].find((item) => item[0] === key)[1];
   }
 
   remove(key) {
@@ -55,14 +55,16 @@ class HashTable {
 const table = new HashTable(50);
 
 table.set("name", "hunais");
+table.set("naem", "aa");
+table.set("name", "madhav");
 table.set("age", 23);
 console.log(table.get("name"));
+console.log(table.get("naem"));
 console.log(table.get("age"));
 
-table.remove("age")
+table.remove("age");
 
-
-table.print();
+// table.print();
 
 // class HashTable {
 //   constructor(size) {
@@ -81,7 +83,6 @@ table.print();
 //     let index = this.hash(key);
 //     this.data[index] = value;
 //   }
-
 
 //   get(key) {
 //     let index = this.hash(key);
